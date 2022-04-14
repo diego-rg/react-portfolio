@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 
 import Header from "./components/Header";
@@ -7,17 +7,9 @@ import { Container, Box } from "@mui/material";
 
 const App = () => {
   return (
-    <Box>
+    <Box className="app-container">
       <Header />
-      <Box
-        sx={{
-          background: "red",
-          minHeight: "50vh",
-          transform: "skewY(8deg)",
-          transformOrigin: "150%",
-        }}
-      ></Box>
-      <Container>
+      <Container className="texto-relleno" component="section">
         <Box sx={{ marginBottom: 4 }}>
           Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro.
           De carne lumbering animata corpora quaeritis. Summus brains sit​​,
