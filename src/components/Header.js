@@ -8,6 +8,7 @@ import {
   MenuItem,
   Container,
   Box,
+  Link,
   Button,
   useScrollTrigger,
 } from "@mui/material";
@@ -15,7 +16,7 @@ import {
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 
-const sections = ["Inicio", "Proyectos", "Portfolio", "Contacto"];
+const sections = ["Proyectos", "Portfolio", "Contacto"];
 
 const Header = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -37,10 +38,11 @@ const Header = () => {
       position="sticky"
       sx={{
         background: {
-          sm: "primary.main",
-          md: trigger ? "primary.main" : "transparent",
+          xs: "green",
+          sm: "green",
+          md: trigger ? "green" : "transparent",
         },
-        boxShadow: trigger ? 3 : "none",
+        boxShadow: { xs: 3, sm: 3, md: trigger ? 3 : "none" },
       }}
     >
       <Container maxWidth="lg">
@@ -51,7 +53,7 @@ const Header = () => {
             component="div"
             sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
           >
-            diego-rg
+            <Link href="#">diego-rg</Link>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -85,7 +87,7 @@ const Header = () => {
             >
               {sections.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Link href={`#${page}`}>{page}</Link>
                 </MenuItem>
               ))}
             </Menu>
@@ -96,7 +98,7 @@ const Header = () => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
           >
-            diego-rg
+            <Link href="#">diego-rg</Link>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {sections.map((page) => (
@@ -105,63 +107,13 @@ const Header = () => {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-                {page}
+                <Link href={`#${page}`}>{page}</Link>
               </Button>
             ))}
           </Box>
         </Toolbar>
       </Container>
     </AppBar>
-
-    // <AppBar
-    //   position="sticky"
-    //   sx={{
-    //     background: trigger ? "red" : "transparent",
-    //     boxShadow: "none",
-    //     maxWidth: "lg",
-    //     margin: "auto",
-    //   }}
-    // >
-    //   <Toolbar>
-    //     <IconButton
-    //       onClick={handleOpenNavMenu}
-    //       size="large"
-    //       edge="start"
-    //       color="inherit"
-    //       aria-label="menu"
-    //       sx={{ mr: 2 }}
-    //     >
-    //       <MenuIcon />
-    //     </IconButton>
-    //     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-    //       diego-rg
-    //     </Typography>
-    //     <Menu
-    //       id="menu-appbar"
-    //       anchorEl={navState}
-    //       anchorOrigin={{
-    //         vertical: "bottom",
-    //         horizontal: "left",
-    //       }}
-    //       keepMounted
-    //       transformOrigin={{
-    //         vertical: "top",
-    //         horizontal: "left",
-    //       }}
-    //       open={Boolean(navState)}
-    //       onClose={handleCloseNavMenu}
-    //       sx={{
-    //         display: { xs: "block", md: "none" },
-    //       }}
-    //     >
-    //       {sections.map((page) => (
-    //         <MenuItem key={page} onClick={handleCloseNavMenu}>
-    //           <Typography textAlign="center">{page}</Typography>
-    //         </MenuItem>
-    //       ))}
-    //     </Menu>
-    //   </Toolbar>
-    // </AppBar>
   );
 };
 
