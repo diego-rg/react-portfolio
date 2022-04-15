@@ -1,4 +1,4 @@
-// import logo from "./logo.svg";
+// import logo from "./logo.png";
 import "./App.css";
 
 import "@fontsource/julius-sans-one";
@@ -7,6 +7,7 @@ import "@fontsource/source-sans-pro";
 
 import Header from "./components/Header";
 import About from "./components/About";
+import Projects from "./components/Projects";
 
 import mainTheme from "./themes/mainTheme";
 
@@ -20,6 +21,7 @@ const App = () => {
       <Box className="app-container">
         <Header />
         <About />
+        <Projects />
         <Container className="texto-relleno" component="section">
           <Typography component="aside" sx={{ marginBottom: 40 }}>
             Zombie ipsum reversus ab viral inferno, nam rick grimes malum
@@ -45,7 +47,7 @@ const App = () => {
             defunctis go lum cerebro. Nescio brains an Undead zombies. Sicut
             malus putrid voodoo horror. Nigh tofth eliv ingdead.
           </Box>
-          <Box sx={{ marginBottom: 4 }} id="Proyectos">
+          <Box sx={{ marginBottom: 4 }}>
             PROYECTOS Zombie ipsum reversus ab viral inferno, nam rick grimes
             malum cerebro. De carne lumbering animata corpora quaeritis. Summus
             brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead

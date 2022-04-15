@@ -3,10 +3,10 @@ import { responsiveFontSizes, createTheme } from "@mui/material/styles";
 let mainTheme = createTheme({
   palette: {
     primary: {
-      main: "#FF0000",
+      main: "#7b0172",
     },
     secondary: {
-      main: "#4A45D0",
+      main: "#b5c22c",
     },
   },
   components: {
@@ -49,6 +49,14 @@ let mainTheme = createTheme({
         root: {
           textDecoration: "none",
           fontFamily: "Source Sans Pro",
+          fontSize: "1.25rem",
+          color: "#c5c6c8",
+        },
+      },
+    },
+    MuiSvgIcon: {
+      styleOverrides: {
+        root: {
           color: "#c5c6c8",
         },
       },

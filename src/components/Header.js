@@ -9,7 +9,6 @@ import {
   Container,
   Box,
   Link,
-  Button,
   useScrollTrigger,
 } from "@mui/material";
 
@@ -49,7 +48,8 @@ const Header = () => {
             component="div"
             sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
           >
-            <Link href="#">diego-rg</Link>
+            <Link sx={{
+          fontSize: "1.5rem",}} href="#">diego-rg</Link>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -88,6 +88,7 @@ const Header = () => {
               ))}
             </Menu>
           </Box>
+
           <Typography
             variant="h6"
             noWrap
@@ -106,17 +107,13 @@ const Header = () => {
             sx={{
               flexGrow: 1,
               display: { xs: "none", md: "flex" },
-              justifyContent: "end",
+              justifyContent: "flex-end",
             }}
           >
             {sections.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                <Link href={`#${page}`}>{page}</Link>
-              </Button>
+              <Link key={page} sx={{ paddingLeft: 2 }} href={`#${page}`}>
+                {page}
+              </Link>
             ))}
           </Box>
         </Toolbar>
