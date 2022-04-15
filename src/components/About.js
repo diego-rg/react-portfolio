@@ -29,7 +29,7 @@ const About = () => {
           Actualmente trabajando en mis proyectos personales con React,
           MaterialUI, Bootstrap, Node, Express, MongoDB, etc
         </Typography>
-        <Button variant="outlined" sx={{ margin: "auto" }}>
+        <Button href="#Contacto" variant="outlined" sx={{ margin: "auto" }}>
           Contacto
         </Button>
       </Container>
