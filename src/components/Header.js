@@ -37,12 +37,8 @@ const Header = () => {
     <AppBar
       position="sticky"
       sx={{
-        background: {
-          xs: "green",
-          sm: "green",
-          md: trigger ? "green" : "transparent",
-        },
-        boxShadow: { xs: 3, sm: 3, md: trigger ? 3 : "none" },
+        background: trigger ? "#202833" : "transparent",
+        boxShadow: trigger ? 3 : "none",
       }}
     >
       <Container maxWidth="lg">
@@ -96,11 +92,23 @@ const Header = () => {
             variant="h6"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "none" },
+              justifyContent: "flex-end",
+            }}
           >
-            <Link href="#">diego-rg</Link>
+            <Link sx={{ padding: 1.5 }} href="#">
+              diego-rg
+            </Link>
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", md: "flex" },
+              justifyContent: "end",
+            }}
+          >
             {sections.map((page) => (
               <Button
                 key={page}
