@@ -2,12 +2,13 @@ import React from "react";
 
 import { Container, Typography } from "@mui/material";
 
-const About = () => {
+const Portfolio = () => {
   return (
     <Container
+      id="Portfolio"
       component="section"
       sx={{
-        paddingBottom: 12,
+        background: "#0b0c10",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-evenly",
@@ -15,16 +16,24 @@ const About = () => {
       }}
     >
       <Container maxWidth="sm">
-        <Typography component="h1" variant="h1" sx={{ textAlign: "center" }}>
+        <Typography
+          component="h1"
+          variant="h1"
+          sx={{ color: "#45a29f", textAlign: "center" }}
+        >
           diego rg
         </Typography>
-        <Typography component="h4" variant="h4" sx={{ textAlign: "center" }}>
+        <Typography
+          component="h4"
+          variant="h4"
+          sx={{ color: "#45a29f", textAlign: "center" }}
+        >
           Desarrollador web
         </Typography>
       </Container>
 
       <Container maxWidth="md">
-        <Typography sx={{ textAlign: "center" }}>
+        <Typography sx={{ color: "#45a29f", textAlign: "center" }}>
           Desarrollador web autodidacta especializado el stack de JavaScript.
           Actualmente trabajando en mis proyectos personales con React,
           MaterialUI, Bootstrap, Node, Express, MongoDB, etc
@@ -33,4 +42,4 @@ const About = () => {
     </Container>
   );
 };
-export default About;
+export default Portfolio;

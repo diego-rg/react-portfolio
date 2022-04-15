@@ -48,8 +48,14 @@ const Header = () => {
             component="div"
             sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
           >
-            <Link sx={{
-          fontSize: "1.5rem",}} href="#">diego-rg</Link>
+            <Link
+              sx={{
+                fontSize: "1.5rem",
+              }}
+              href="#"
+            >
+              diego-rg
+            </Link>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -83,7 +89,7 @@ const Header = () => {
             >
               {sections.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Link href={`#${page}`}>{page}</Link>
+                  <Link href={`#${page}`}>a{page}</Link>
                 </MenuItem>
               ))}
             </Menu>

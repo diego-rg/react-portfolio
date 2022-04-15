@@ -61,6 +61,13 @@ let mainTheme = createTheme({
         },
       },
     },
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          background: "#0b0c10",
+        },
+      },
+    },
   },
 });
 
