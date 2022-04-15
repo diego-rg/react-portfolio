@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Container, Typography } from "@mui/material";
+import { Container, Typography, Button } from "@mui/material";
 
 const About = () => {
   return (
@@ -24,11 +24,14 @@ const About = () => {
       </Container>
 
       <Container maxWidth="md">
-        <Typography sx={{ textAlign: "center" }}>
+        <Typography sx={{ textAlign: "center", paddingBottom: 4 }}>
           Desarrollador web autodidacta especializado el stack de JavaScript.
           Actualmente trabajando en mis proyectos personales con React,
           MaterialUI, Bootstrap, Node, Express, MongoDB, etc
         </Typography>
+        <Button variant="outlined" sx={{ margin: "auto" }}>
+          Contacto
+        </Button>
       </Container>
     </Container>
   );

@@ -3,10 +3,10 @@ import { responsiveFontSizes, createTheme } from "@mui/material/styles";
 let mainTheme = createTheme({
   palette: {
     primary: {
-      main: "#7b0172",
+      main: "#66fcf1",
     },
     secondary: {
-      main: "#b5c22c",
+      main: "#202833",
     },
   },
   components: {
@@ -65,6 +65,13 @@ let mainTheme = createTheme({
       styleOverrides: {
         root: {
           background: "#0b0c10",
+        },
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: "0",
         },
       },
     },
