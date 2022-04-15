@@ -23,8 +23,8 @@ const About = () => {
         </Typography>
       </Container>
 
-      <Container maxWidth="md">
-        <Typography sx={{ textAlign: "center", paddingBottom: 4 }}>
+      <Container maxWidth="md" sx={{ textAlign: "center" }}>
+        <Typography sx={{ paddingBottom: 4 }}>
           Desarrollador web autodidacta especializado el stack de JavaScript.
           Actualmente trabajando en mis proyectos personales con React,
           MaterialUI, Bootstrap, Node, Express, MongoDB, etc

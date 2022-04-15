@@ -36,7 +36,11 @@ const Header = () => {
     <AppBar
       position="sticky"
       sx={{
-        background: trigger ? "#202833" : "transparent",
+        background: {
+          xs: "#0b0c10",
+          sm: "#0b0c10",
+          md: trigger ? "#66fcf1" : "transparent",
+        },
         boxShadow: trigger ? 3 : "none",
       }}
     >
@@ -50,6 +54,7 @@ const Header = () => {
           >
             <Link
               sx={{
+                color: trigger ? "#202833" : "#c5c6c8",
                 fontSize: "1.5rem",
               }}
               href="#"
@@ -89,7 +94,7 @@ const Header = () => {
             >
               {sections.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Link href={`#${page}`}>a{page}</Link>
+                  <Link href={`#${page}`}>{page}</Link>
                 </MenuItem>
               ))}
             </Menu>
@@ -117,7 +122,14 @@ const Header = () => {
             }}
           >
             {sections.map((page) => (
-              <Link key={page} sx={{ paddingLeft: 2 }} href={`#${page}`}>
+              <Link
+                key={page}
+                sx={{
+                  color: trigger ? "#202833" : "#c5c6c8",
+                  paddingLeft: 2,
+                }}
+                href={`#${page}`}
+              >
                 {page}
               </Link>
             ))}
