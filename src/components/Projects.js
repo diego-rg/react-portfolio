@@ -2,7 +2,6 @@ import React from "react";
 import projects from "../text/projects";
 
 import {
-  Container,
   Button,
   Typography,
   Box,
@@ -10,6 +9,7 @@ import {
   CardMedia,
   CardContent,
   CardActions,
+  Grid,
 } from "@mui/material";
 
 const Projects = () => {
@@ -21,51 +21,79 @@ const Projects = () => {
     )
     .map((project) => {
       return (
-        <Card
+        <Grid
+          item
+          sm={12}
+          md={6}
           key={project.name}
-          sx={{ background: "#c5c6c8", maxWidth: "50%" }}
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
         >
-          <CardMedia component="img" alt={project.name} image={project.image} />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              {project.name}
-            </Typography>
-            <Typography variant="body2" color="#0b0c10">
-              {project.description}
-            </Typography>
-          </CardContent>
-          <CardActions>
-            <Button color="secondary" variant="contained" size="small">
-              Visitar
-            </Button>
-            <Button color="secondary" variant="contained" size="small">
-              Código
-            </Button>
-          </CardActions>
-        </Card>
+          <Card sx={{ background: "white", maxWidth: 500 }}>
+            <Box sx={{ padding: 2 }}>
+              <CardMedia
+                component="img"
+                height="auto"
+                alt={project.name}
+                image={project.image}
+              />
+            </Box>
+            <CardContent>
+              <Typography
+                gutterBottom
+                variant="h5"
+                component="div"
+                sx={{ padding: 0 }}
+              >
+                {project.name}
+              </Typography>
+              <Typography variant="body2" color="#0b0c10">
+                {project.description}
+              </Typography>
+            </CardContent>
+            <CardActions sx={{ padding: 2 }}>
+              <Button color="secondary" variant="contained" size="small">
+                Visitar
+              </Button>
+              <Button color="secondary" variant="contained" size="small">
+                Código
+              </Button>
+            </CardActions>
+          </Card>
+        </Grid>
       );
     });
 
   return (
     <Box
+      component="section"
+      id="Proyectos"
       sx={{
-        background: "#c5c6c8",
+        background: "white",
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center",
       }}
     >
-      <Container
-        maxWidth="md"
-        id="Proyectos"
-        component="section"
+      <Grid
+        spacing="24"
+        container
+        maxWidth="lg"
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
         sx={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-evenly",
-          alignItems: "center",
-          minHeight: "100vh",
+          padding: 3,
         }}
       >
         {renderedProjects}
-      </Container>
+      </Grid>
     </Box>
   );
 };

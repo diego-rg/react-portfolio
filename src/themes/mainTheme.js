@@ -24,6 +24,16 @@ let mainTheme = createTheme({
         },
         {
           props: {
+            variant: "body2",
+          },
+          style: {
+            fontFamily: "Source Sans Pro",
+            color: "#c5c6c8",
+            fontSize: "1.1rem",
+          },
+        },
+        {
+          props: {
             variant: "h1",
           },
           style: {
@@ -38,6 +48,17 @@ let mainTheme = createTheme({
           style: {
             fontFamily: "Archivo Narrow",
             color: "#66fcf1",
+            fontWeight: "bold",
+            textTransform: "uppercase",
+          },
+        },
+        {
+          props: {
+            variant: "h5",
+          },
+          style: {
+            fontFamily: "Archivo Narrow",
+            color: "#0b0c10",
             fontWeight: "bold",
             textTransform: "uppercase",
           },
