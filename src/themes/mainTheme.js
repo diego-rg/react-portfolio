@@ -86,6 +86,7 @@ let mainTheme = createTheme({
       styleOverrides: {
         root: {
           background: "#0b0c10",
+          borderRadius: "0"
         },
       },
     },
@@ -93,6 +94,8 @@ let mainTheme = createTheme({
       styleOverrides: {
         root: {
           borderRadius: "0",
+          fontFamily: "Archivo Narrow",
+          letterSpacing: "0.05em",
         },
       },
     },

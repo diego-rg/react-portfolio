@@ -56,10 +56,20 @@ const Projects = () => {
               </Typography>
             </CardContent>
             <CardActions sx={{ padding: 2 }}>
-              <Button color="secondary" variant="contained" size="small">
+              <Button
+                href={project.website}
+                color="secondary"
+                variant="contained"
+                size="small"
+              >
                 Visitar
               </Button>
-              <Button color="secondary" variant="contained" size="small">
+              <Button
+                href={project.code}
+                color="secondary"
+                variant="contained"
+                size="small"
+              >
                 Código
               </Button>
             </CardActions>
@@ -76,18 +86,22 @@ const Projects = () => {
         background: "white",
         minHeight: "100vh",
         display: "flex",
-        flexDirection: "row",
-        justifyContent: "center",
+        flexDirection: "column",
+        justifyContent: "space-evenly",
         alignItems: "center",
       }}
     >
+      <Typography
+        component="h4"
+        variant="h4"
+        sx={{ marginTop: 9, textAlign: "center", color: "#0b0c10" }}
+      >
+        Proyectos principales
+      </Typography>
       <Grid
-        spacing="24"
         container
+        spacing="24"
         maxWidth="lg"
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
         sx={{
           padding: 3,
         }}
