@@ -16,19 +16,7 @@ import {
 const Portfolio = () => {
   const renderedProjects = projects.map((project) => {
     return (
-      <Grid
-        item
-        sm={12}
-        md={6}
-        lg={4}
-        key={project.name}
-        sx={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+      <Grid item key={project.name}>
         <Card
           sx={{
             display: "flex",
@@ -36,6 +24,7 @@ const Portfolio = () => {
             background: "white",
             maxWidth: 350,
             height: 450,
+            border: "1px solid #c5c6c8",
           }}
         >
           <Box sx={{ padding: 2 }}>
@@ -63,7 +52,7 @@ const Portfolio = () => {
             <Button
               href={project.website}
               color="secondary"
-              variant="contained"
+              variant="outlined"
               size="small"
             >
               Visitar
@@ -71,7 +60,7 @@ const Portfolio = () => {
             <Button
               href={project.code}
               color="secondary"
-              variant="contained"
+              variant="outlined"
               size="small"
             >
               Código
@@ -87,30 +76,42 @@ const Portfolio = () => {
       component="section"
       id="Portfolio"
       sx={{
+        paddingBottom: { xs: 2, sm: 8 },
         background: "white",
         minHeight: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
       }}
     >
-      <Container maxWidth="lg">
+      <Container
+        maxWidth="lg"
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
         <Typography
           component="h4"
           variant="h4"
-          sx={{ marginTop: 9, textAlign: "center", color: "#0b0c10" }}
+          sx={{
+            marginY: { xs: 4, sm: 8 },
+            textAlign: "center",
+            color: "#0b0c10",
+          }}
         >
           Portfolio completo
         </Typography>
         <Grid
           container
-          spacing={4}
-          maxWidth="lg"
+          spacing={2}
           sx={{
-            justifyContent: "center",
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: {
+              xs: "center",
+              xl: "space-between",
+            },
             alignItems: "center",
-            padding: 3,
           }}
         >
           {renderedProjects}

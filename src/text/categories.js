@@ -7,6 +7,8 @@ const categories = [
   "react",
   "materialui",
   "node",
-  "javascript"
+  "javascript",
+  "css",
+  "html",
 ];
 export default categories;

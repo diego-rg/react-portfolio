@@ -25,12 +25,11 @@ const Projects = () => {
         <Grid item key={project.name}>
           <Card
             sx={{
-              margin: "auto",
               display: "flex",
               flexDirection: "column",
               background: "white",
               maxWidth: 500,
-              height: 475,
+              height: 500,
               border: "1px solid #c5c6c8",
             }}
           >
@@ -83,6 +82,7 @@ const Projects = () => {
       component="section"
       id="Proyectos"
       sx={{
+        paddingBottom: { xs: 2, sm: 8 },
         background: "white",
         minHeight: "100vh",
       }}
@@ -113,7 +113,10 @@ const Projects = () => {
           sx={{
             display: "flex",
             flexDirection: "row",
-            justifyContent: { md: "center", xl: "space-between" },
+            justifyContent: {
+              xs: "center",
+              xl: "space-between",
+            },
             alignItems: "center",
           }}
         >
