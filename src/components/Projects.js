@@ -33,7 +33,7 @@ const Projects = () => {
             alignItems: "center",
           }}
         >
-          <Card sx={{ background: "white", maxWidth: 500 }}>
+          <Card sx={{ background: "white", maxWidth: 500, height: 475 }}>
             <Box sx={{ padding: 2 }}>
               <CardMedia
                 component="img"
@@ -103,6 +103,8 @@ const Projects = () => {
         spacing="24"
         maxWidth="lg"
         sx={{
+          justifyContent: "center",
+          alignItems: "center",
           padding: 3,
         }}
       >

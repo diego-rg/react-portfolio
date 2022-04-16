@@ -24,7 +24,7 @@ const projects = [
     categories: ["node", "express", "rest", "mongodb"],
     website: "https://api-diccionarioprogramacion.herokuapp.com/",
     code: "https://github.com/diego-rg/api-diccionario-programacion",
-    image: "nono.png",
+    image: "api.png",
   },
   {
     name: "Juego colores RGB",
@@ -33,7 +33,7 @@ const projects = [
     categories: ["javascript"],
     website: "https://diego-rg.github.io/color-guessing-game/",
     code: "https://github.com/diego-rg/color-guessing-game",
-    image: "nono.png",
+    image: "game.png",
   },
   {
     name: "MetTech",
@@ -42,7 +42,7 @@ const projects = [
     categories: ["bootstrap"],
     website: "https://diego-rg.github.io/mettech-bootstrap/",
     code: "https://github.com/diego-rg/mettech-bootstrap",
-    image: "nono.png",
+    image: "mettech.png",
   },
 ];
 
