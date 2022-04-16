@@ -1,3 +1,14 @@
+/*fix para sticky navbar*/
+html {
+  scroll-padding-top: 64px;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    scroll-padding-top: 56px;
+  }
+}
+
 body {
   margin: 0;
   background-color: #0b0c10;

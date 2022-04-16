@@ -22,7 +22,7 @@ const Projects = () => {
     )
     .map((project) => {
       return (
-        <Grid item md={12} lg={6} key={project.name}>
+        <Grid item key={project.name}>
           <Card
             sx={{
               margin: "auto",
@@ -83,7 +83,6 @@ const Projects = () => {
       component="section"
       id="Proyectos"
       sx={{
-        paddingTop: { xs: "56px", sm: "64px"},
         background: "white",
         minHeight: "100vh",
       }}
@@ -100,11 +99,22 @@ const Projects = () => {
         <Typography
           component="h4"
           variant="h4"
-          sx={{ textAlign: "center", color: "#0b0c10" }}
+          sx={{ marginY: 4, textAlign: "center", color: "#0b0c10" }}
         >
           Proyectos principales
         </Typography>
-        <Grid container>{renderedProjects}</Grid>
+        <Grid
+          container
+          spacing={2}
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: { md: "center", xl: "space-between" },
+            alignItems: "center",
+          }}
+        >
+          {renderedProjects}
+        </Grid>
       </Container>
     </Box>
   );
