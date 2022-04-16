@@ -83,12 +83,9 @@ const Projects = () => {
       component="section"
       id="Proyectos"
       sx={{
+        paddingTop: { xs: "56px", sm: "64px"},
         background: "white",
         minHeight: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
       }}
     >
       <Container
@@ -103,7 +100,7 @@ const Projects = () => {
         <Typography
           component="h4"
           variant="h4"
-          sx={{ marginTop: 9, textAlign: "center", color: "#0b0c10" }}
+          sx={{ textAlign: "center", color: "#0b0c10" }}
         >
           Proyectos principales
         </Typography>
