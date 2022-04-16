@@ -106,6 +106,7 @@ let mainTheme = createTheme({
           borderRadius: "0",
           fontFamily: "Archivo Narrow",
           letterSpacing: "0.05em",
+          fontSize: "1rem",
         },
       },
     },

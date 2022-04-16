@@ -59,7 +59,7 @@ const Projects = () => {
               <Button
                 href={project.website}
                 color="secondary"
-                variant="contained"
+                variant="outlined"
                 size="small"
               >
                 Visitar
@@ -67,7 +67,7 @@ const Projects = () => {
               <Button
                 href={project.code}
                 color="secondary"
-                variant="contained"
+                variant="outlined"
                 size="small"
               >
                 Código
@@ -99,7 +99,11 @@ const Projects = () => {
         <Typography
           component="h4"
           variant="h4"
-          sx={{ marginY: 4, textAlign: "center", color: "#0b0c10" }}
+          sx={{
+            marginY: { xs: 4, sm: 8 },
+            textAlign: "center",
+            color: "#0b0c10",
+          }}
         >
           Proyectos principales
         </Typography>
