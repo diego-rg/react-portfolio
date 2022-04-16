@@ -37,10 +37,10 @@ const Header = () => {
       position="sticky"
       sx={{
         background: {
-          xs: "#0b0c10",
-          sm: "#0b0c10",
+          xs: trigger ? "#0b0c10" : "transparent",
+          sm: trigger ? "#0b0c10" : "transparent",
           md: trigger
-            ? "linear-gradient(180deg,#49B5AD,#66fcf1)"
+            ? "linear-gradient(180deg,#48B0A8,#66fcf1)"
             : "transparent",
         },
         boxShadow: trigger ? 3 : "none",

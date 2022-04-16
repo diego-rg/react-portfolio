@@ -6,7 +6,7 @@ let mainTheme = createTheme({
       main: "#66fcf1",
     },
     secondary: {
-      main: "#202833",
+      main: "#0b0c10",
     },
   },
   components: {

@@ -11,6 +11,7 @@ const About = () => {
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-evenly",
+        alignItems: "center",
         minHeight: "100vh",
       }}
     >

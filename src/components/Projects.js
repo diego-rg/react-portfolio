@@ -1,45 +1,72 @@
 import React from "react";
+import projects from "../text/projects";
 
-import { Container, Typography } from "@mui/material";
+import {
+  Container,
+  Button,
+  Typography,
+  Box,
+  Card,
+  CardMedia,
+  CardContent,
+  CardActions,
+} from "@mui/material";
 
 const Projects = () => {
+  const renderedProjects = projects
+    .filter(
+      (project) =>
+        project.name === "NoNo Audiología" ||
+        project.name === "Diccionario programación"
+    )
+    .map((project) => {
+      return (
+        <Card
+          key={project.name}
+          sx={{ background: "#c5c6c8", maxWidth: "50%" }}
+        >
+          <CardMedia component="img" alt={project.name} image={project.image} />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              {project.name}
+            </Typography>
+            <Typography variant="body2" color="#0b0c10">
+              {project.description}
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <Button color="secondary" variant="contained" size="small">
+              Visitar
+            </Button>
+            <Button color="secondary" variant="contained" size="small">
+              Código
+            </Button>
+          </CardActions>
+        </Card>
+      );
+    });
+
   return (
-    <Container
-      id="Proyectos"
-      component="section"
+    <Box
       sx={{
         background: "#c5c6c8",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-evenly",
-        minHeight: "100vh",
       }}
     >
-      <Container maxWidth="sm">
-        <Typography
-          component="h1"
-          variant="h1"
-          sx={{ color: "#0b0c10", textAlign: "center" }}
-        >
-          diego rg
-        </Typography>
-        <Typography
-          component="h4"
-          variant="h4"
-          sx={{ color: "#0b0c10", textAlign: "center" }}
-        >
-          Desarrollador web
-        </Typography>
+      <Container
+        maxWidth="md"
+        id="Proyectos"
+        component="section"
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-evenly",
+          alignItems: "center",
+          minHeight: "100vh",
+        }}
+      >
+        {renderedProjects}
       </Container>
-
-      <Container maxWidth="md">
-        <Typography sx={{ color: "#0b0c10", textAlign: "center" }}>
-          Desarrollador web autodidacta especializado el stack de JavaScript.
-          Actualmente trabajando en mis proyectos personales con React,
-          MaterialUI, Bootstrap, Node, Express, MongoDB, etc
-        </Typography>
-      </Container>
-    </Container>
+    </Box>
   );
 };
 export default Projects;
