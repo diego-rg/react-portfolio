@@ -23,8 +23,8 @@ const Projects = () => {
       return (
         <Grid
           item
-          sm={12}
-          md={6}
+          md={12}
+          lg={6}
           key={project.name}
           sx={{
             display: "flex",
@@ -100,7 +100,7 @@ const Projects = () => {
       </Typography>
       <Grid
         container
-        spacing="24"
+        spacing={4}
         maxWidth="lg"
         sx={{
           justifyContent: "center",

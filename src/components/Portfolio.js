@@ -83,7 +83,7 @@ const Portfolio = () => {
         minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "space-evenly",
+        justifyContent: "center",
         alignItems: "center",
       }}
     >
@@ -96,7 +96,7 @@ const Portfolio = () => {
       </Typography>
       <Grid
         container
-        spacing="24"
+        spacing={4}
         maxWidth="lg"
         sx={{
           justifyContent: "center",
