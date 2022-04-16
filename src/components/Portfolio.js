@@ -10,6 +10,7 @@ import {
   CardContent,
   CardActions,
   Grid,
+  Container,
 } from "@mui/material";
 
 const Portfolio = () => {
@@ -26,10 +27,17 @@ const Portfolio = () => {
           flexDirection: "row",
           justifyContent: "center",
           alignItems: "center",
-          minHeight: "100%",
         }}
       >
-        <Card sx={{ background: "white", maxWidth: 350, height: 450 }}>
+        <Card
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            background: "white",
+            maxWidth: 350,
+            height: 450,
+          }}
+        >
           <Box sx={{ padding: 2 }}>
             <CardMedia
               component="img"
@@ -41,7 +49,7 @@ const Portfolio = () => {
           <CardContent>
             <Typography
               gutterBottom
-              variant="h5"
+              variant="h6"
               component="div"
               sx={{ padding: 0 }}
             >
@@ -51,7 +59,7 @@ const Portfolio = () => {
               {project.description}
             </Typography>
           </CardContent>
-          <CardActions sx={{ padding: 2 }}>
+          <CardActions sx={{ marginTop: "auto", padding: 2 }}>
             <Button
               href={project.website}
               color="secondary"
@@ -87,25 +95,27 @@ const Portfolio = () => {
         alignItems: "center",
       }}
     >
-      <Typography
-        component="h4"
-        variant="h4"
-        sx={{ marginTop: 9, textAlign: "center", color: "#0b0c10" }}
-      >
-        Portfolio completo
-      </Typography>
-      <Grid
-        container
-        spacing={4}
-        maxWidth="lg"
-        sx={{
-          justifyContent: "center",
-          alignItems: "center",
-          padding: 3,
-        }}
-      >
-        {renderedProjects}
-      </Grid>
+      <Container maxWidth="lg">
+        <Typography
+          component="h4"
+          variant="h4"
+          sx={{ marginTop: 9, textAlign: "center", color: "#0b0c10" }}
+        >
+          Portfolio completo
+        </Typography>
+        <Grid
+          container
+          spacing={4}
+          maxWidth="lg"
+          sx={{
+            justifyContent: "center",
+            alignItems: "center",
+            padding: 3,
+          }}
+        >
+          {renderedProjects}
+        </Grid>
+      </Container>
     </Box>
   );
 };

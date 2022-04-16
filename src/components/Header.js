@@ -49,7 +49,7 @@ const Header = () => {
       <Container maxWidth="lg">
         <Toolbar disableGutters>
           <Typography
-            variant="h6"
+            variant="h5"
             noWrap
             component="div"
             sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
@@ -103,7 +103,7 @@ const Header = () => {
           </Box>
 
           <Typography
-            variant="h6"
+            variant="h5"
             noWrap
             component="div"
             sx={{

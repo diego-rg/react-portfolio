@@ -57,6 +57,16 @@ let mainTheme = createTheme({
             variant: "h5",
           },
           style: {
+            fontFamily: "Source Sans Pro",
+            fontSize: "1.25rem",
+            color: "#c5c6c8",
+          },
+        },
+        {
+          props: {
+            variant: "h6",
+          },
+          style: {
             fontFamily: "Archivo Narrow",
             color: "#0b0c10",
             fontWeight: "bold",
@@ -86,7 +96,7 @@ let mainTheme = createTheme({
       styleOverrides: {
         root: {
           background: "#0b0c10",
-          borderRadius: "0"
+          borderRadius: "0",
         },
       },
     },

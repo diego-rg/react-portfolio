@@ -10,6 +10,7 @@ import {
   CardContent,
   CardActions,
   Grid,
+  Container,
 } from "@mui/material";
 
 const Projects = () => {
@@ -21,19 +22,18 @@ const Projects = () => {
     )
     .map((project) => {
       return (
-        <Grid
-          item
-          md={12}
-          lg={6}
-          key={project.name}
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <Card sx={{ background: "white", maxWidth: 500, height: 475 }}>
+        <Grid item md={12} lg={6} key={project.name}>
+          <Card
+            sx={{
+              margin: "auto",
+              display: "flex",
+              flexDirection: "column",
+              background: "white",
+              maxWidth: 500,
+              height: 475,
+              border: "1px solid #c5c6c8",
+            }}
+          >
             <Box sx={{ padding: 2 }}>
               <CardMedia
                 component="img"
@@ -45,7 +45,7 @@ const Projects = () => {
             <CardContent>
               <Typography
                 gutterBottom
-                variant="h5"
+                variant="h6"
                 component="div"
                 sx={{ padding: 0 }}
               >
@@ -55,7 +55,7 @@ const Projects = () => {
                 {project.description}
               </Typography>
             </CardContent>
-            <CardActions sx={{ padding: 2 }}>
+            <CardActions sx={{ marginTop: "auto", padding: 2 }}>
               <Button
                 href={project.website}
                 color="secondary"
@@ -87,29 +87,28 @@ const Projects = () => {
         minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "space-evenly",
+        justifyContent: "center",
         alignItems: "center",
       }}
     >
-      <Typography
-        component="h4"
-        variant="h4"
-        sx={{ marginTop: 9, textAlign: "center", color: "#0b0c10" }}
-      >
-        Proyectos principales
-      </Typography>
-      <Grid
-        container
-        spacing={4}
+      <Container
         maxWidth="lg"
         sx={{
+          display: "flex",
+          flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          padding: 3,
         }}
       >
-        {renderedProjects}
-      </Grid>
+        <Typography
+          component="h4"
+          variant="h4"
+          sx={{ marginTop: 9, textAlign: "center", color: "#0b0c10" }}
+        >
+          Proyectos principales
+        </Typography>
+        <Grid container>{renderedProjects}</Grid>
+      </Container>
     </Box>
   );
 };
