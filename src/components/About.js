@@ -12,7 +12,7 @@ const About = () => {
         flexDirection: "column",
         justifyContent: "space-evenly",
         alignItems: "center",
-        minHeight: "100vh",
+        minHeight: { xs: "calc(100vh - 56px)", md: "calc(100vh - 64px)" },
       }}
     >
       <Container maxWidth="sm">

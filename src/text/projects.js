@@ -6,7 +6,7 @@ const projects = [
     categories: ["node", "express", "mongodb", "bootstrap", "ejs", "rest"],
     website: "https://nono-audiologia.herokuapp.com/",
     code: "https://github.com/diego-rg/nono-audiologia",
-    image: "./static/img/nono.png",
+    image: "/static/img/nono.PNG",
   },
   {
     name: "Diccionario programación",
@@ -15,7 +15,7 @@ const projects = [
     categories: ["react", "materialui"],
     website: "https://react-diccionario-programacion.vercel.app/",
     code: "https://github.com/diego-rg/react-diccionario-programacion",
-    image: "./static/img/diccionario.png",
+    image: "/static/img/diccionario.PNG",
   },
   {
     name: "API diccionario programación",
@@ -24,7 +24,7 @@ const projects = [
     categories: ["node", "express", "rest", "mongodb"],
     website: "https://api-diccionarioprogramacion.herokuapp.com/",
     code: "https://github.com/diego-rg/api-diccionario-programacion",
-    image: "./static/img/api.png",
+    image: "/static/img/api.PNG",
   },
   {
     name: "MetTech",
@@ -33,7 +33,7 @@ const projects = [
     categories: ["bootstrap"],
     website: "https://diego-rg.github.io/mettech-bootstrap/",
     code: "https://github.com/diego-rg/mettech-bootstrap",
-    image: "./static/img/mettech.png",
+    image: "/static/img/mettech.PNG",
   },
   {
     name: "Juego colores RGB",
@@ -42,7 +42,7 @@ const projects = [
     categories: ["javascript", "css", "html"],
     website: "https://diego-rg.github.io/color-guessing-game/",
     code: "https://github.com/diego-rg/color-guessing-game",
-    image: "./static/img/game.png",
+    image: "/static/img/game.PNG",
   },
   {
     name: "Portfolio css/html",
@@ -50,7 +50,7 @@ const projects = [
     categories: ["css", "html"],
     website: "https://diego-rg.github.io/portfolio-basico-espanol/",
     code: "https://github.com/diego-rg/portfolio-basico-espanol",
-    image: "./static/img/portfolioSencillo.png",
+    image: "/static/img/./portfolioSencillo.PNG",
   },
 ];
 

@@ -12,7 +12,7 @@ const Contact = () => {
       component="section"
       id="Contacto"
       sx={{
-        minHeight: "calc(100vh - 64px)",
+        minHeight: { xs: "calc(100vh - 56px)", md: "calc(100vh - 64px)" },
       }}
     >
       <Container

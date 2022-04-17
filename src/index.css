@@ -4,8 +4,8 @@ html {
 }
 
 @media only screen and (max-width: 600px) {
-  body {
-    scroll-padding-top: 56px;
+  html {
+    scroll-padding-top: 55px !important;
   }
 }
 
