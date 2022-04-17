@@ -45,7 +45,7 @@ const projects = [
     image: "game.png",
   },
   {
-    name: "Portfolio sencillo",
+    name: "Portfolio css/html",
     description: "Primer portfolio hecho con css3 y html5.",
     categories: ["css", "html"],
     website: "https://diego-rg.github.io/portfolio-basico-espanol/",

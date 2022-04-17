@@ -1,125 +1,62 @@
 import React from "react";
-import projects from "../text/projects";
 
-import {
-  Button,
-  Typography,
-  Box,
-  Card,
-  CardMedia,
-  CardContent,
-  CardActions,
-  Grid,
-  Container,
-} from "@mui/material";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import EmailIcon from "@mui/icons-material/Email";
+import stackOverflow from "../stackOverflow.svg";
+
+import { Typography, Box, Container, SvgIcon } from "@mui/material";
 
 const Contact = () => {
-  const renderedProjects = projects
-    .filter(
-      (project) =>
-        project.name === "NoNo Audiología" ||
-        project.name === "Diccionario programación"
-    )
-    .map((project) => {
-      return (
-        <Grid item key={project.name}>
-          <Card
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              background: "white",
-              maxWidth: 500,
-              height: 475,
-              border: "1px solid #c5c6c8",
-            }}
-          >
-            <Box sx={{ padding: 2 }}>
-              <CardMedia
-                component="img"
-                height="auto"
-                alt={project.name}
-                image={project.image}
-              />
-            </Box>
-            <CardContent>
-              <Typography
-                gutterBottom
-                variant="h6"
-                component="div"
-                sx={{ padding: 0 }}
-              >
-                {project.name}
-              </Typography>
-              <Typography variant="body2" color="#0b0c10">
-                {project.description}
-              </Typography>
-            </CardContent>
-            <CardActions sx={{ marginTop: "auto", padding: 2 }}>
-              <Button
-                href={project.website}
-                color="secondary"
-                variant="outlined"
-                size="small"
-              >
-                Visitar
-              </Button>
-              <Button
-                href={project.code}
-                color="secondary"
-                variant="outlined"
-                size="small"
-              >
-                Código
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-      );
-    });
-
   return (
-    <Box
+    <Container
       component="section"
       id="Contacto"
       sx={{
-        background: "white",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
         minHeight: "calc(100vh - 64px)",
       }}
     >
-      <Container
-        maxWidth="lg"
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Typography
-          component="h4"
-          variant="h4"
-          sx={{
-            marginY: { xs: 4, sm: 8 },
-            textAlign: "center",
-            color: "#0b0c10",
-          }}
-        >
-          Contacto
-        </Typography>
-        <Grid
-          container
-          spacing={2}
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: { md: "center", xl: "space-between" },
-            alignItems: "center",
-          }}
-        >
-          {renderedProjects}
-        </Grid>
-      </Container>
-    </Box>
+      <Box></Box>
+      <Box component="footer">
+        <Box>
+          <EmailIcon
+            sx={{
+              height: "56px",
+              width: "auto",
+              marginBottom: 1,
+            }}
+          />
+          <GitHubIcon
+            sx={{
+              height: "46px",
+              width: "auto",
+              marginBottom: 1.6,
+            }}
+          />
+          <LinkedInIcon
+            sx={{
+              height: "54px",
+              width: "auto",
+              marginBottom: 1,
+            }}
+          />
+          <SvgIcon
+            sx={{
+              height: "46px",
+              width: "auto",
+              marginBottom: 1.8,
+            }}
+          >
+            <path d="m19.594 2.844-1.625 1.125 5.593 8.219 1.625-1.126ZM15.375 6.53l-1.313 1.5 7.5 6.5 1.313-1.5Zm-3 4.375-.906 1.781 8.844 4.5.906-1.78Zm-1.719 4.531-.437 1.938 9.656 2.281.438-1.937ZM6 18v11h18V18h-2v9H8v-9Zm4.094 1.688-.125 2 9.906.562.125-2ZM10 23v2h9.938v-2Z" />
+          </SvgIcon>
+        </Box>
+        <Typography sx={{ color: "#66fcf1" }}>&copy;2022 diego-rg</Typography>
+      </Box>
+    </Container>
   );
 };
 export default Contact;
