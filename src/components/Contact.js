@@ -1,5 +1,7 @@
 import React from "react";
 
+import ContactForm from "./ContactForm";
+
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
@@ -21,6 +23,7 @@ const Contact = () => {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
+          minHeight: { xs: "calc(100vh - 56px)", md: "calc(100vh - 64px)" },
         }}
       >
         <Typography
@@ -34,7 +37,14 @@ const Contact = () => {
         >
           Contacto
         </Typography>
-        <Box component="footer">
+        <ContactForm />
+        <Box
+          component="footer"
+          sx={{
+            margin: 4,
+            marginTop: "auto",
+          }}
+        >
           <Container
             maxWidth="lg"
             sx={{
@@ -43,7 +53,6 @@ const Contact = () => {
               flexDirection: "row",
               justifyContent: "space-between",
               alignItems: "center",
-              alignSelf: "flex-end",
             }}
           >
             <IconButton href={"mailto:diego_thegarden@hotmail.com"}>

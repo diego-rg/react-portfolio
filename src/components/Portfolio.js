@@ -23,7 +23,7 @@ const Portfolio = () => {
             flexDirection: "column",
             background: "white",
             maxWidth: 350,
-            height: 450,
+            height: 475,
             border: "1px solid #c5c6c8",
           }}
         >
