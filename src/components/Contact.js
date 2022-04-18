@@ -53,6 +53,7 @@ const Contact = () => {
               flexDirection: "row",
               justifyContent: "space-between",
               alignItems: "center",
+              marginY: {xs: 2, sm: 6}
             }}
           >
             <IconButton href={"mailto:diego_thegarden@hotmail.com"}>

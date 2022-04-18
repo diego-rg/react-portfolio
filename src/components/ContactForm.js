@@ -1,14 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-import {
-  Paper,
-  Typography,
-  FormControl,
-  InputLabel,
-  TextField,
-  Button,
-} from "@mui/material";
+import { Typography, TextField, Button, Card } from "@mui/material";
 
 //Formulario de contacto usando Formspree
 const ContactForm = () => {
@@ -59,7 +52,7 @@ const ContactForm = () => {
     setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
     axios({
       method: "POST",
-      url: "https://FormControlspree.io/f/mdobwblp",
+      url: "https://formspree.io/f/mdobwblp",
       data: inputs,
     })
       .then((response) => {
@@ -71,14 +64,26 @@ const ContactForm = () => {
   };
 
   return (
-    <Paper
-      sx={{ background: "white", padding: 2, border: "1px solid #66fcf1" }}
+    <Card
+      sx={{
+        boxSizing: "border-box",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        background: "white",
+        minWidth: { xs: "100%", md: "50%" },
+        maxWidth: "350px",
+        padding: 2,
+        border: "1px solid #66fcf1",
+      }}
     >
-      <Typography variant="h6" sx={{ textAlign: "center" }}>
+      <Typography variant="h6" sx={{ textAlign: "center", paddingBottom: 1 }}>
         Contacta conmigo
       </Typography>
-      <FormControl onSubmit={handleOnSubmit}>
+      <form onSubmit={handleOnSubmit}>
         <TextField
+          sx={{ paddingBottom: 1 }}
           label="Email"
           id="email"
           type="email"
@@ -88,8 +93,8 @@ const ContactForm = () => {
           value={inputs.email}
         />
         <TextField
+          sx={{ paddingBottom: 1 }}
           label="Mensaje"
-          multiline
           variant="outlined"
           id="message"
           name="message"
@@ -109,14 +114,14 @@ const ContactForm = () => {
               : "Enviado"
             : "Enviando..."}
         </Button>
-      </FormControl>
+      </form>
       {status.info.error && (
         <Typography className="error">Error: {status.info.msg}</Typography>
       )}
       {!status.info.error && status.info.msg && (
         <Typography>{status.info.msg}</Typography>
       )}
-    </Paper>
+    </Card>
   );
 };
 
