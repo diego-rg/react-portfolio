@@ -32,7 +32,7 @@ const Contact = () => {
           sx={{
             marginY: { xs: 4, sm: 8 },
             textAlign: "center",
-            color: "#c5c6c8",
+            color: "#66fcf1",
           }}
         >
           Contacto

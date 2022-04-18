@@ -110,6 +110,13 @@ let mainTheme = createTheme({
         },
       },
     },
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          width: "100%",
+        },
+      },
+    },
   },
 });
 

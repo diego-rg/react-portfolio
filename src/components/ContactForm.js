@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-import { Typography, TextField, Button, Card } from "@mui/material";
+import { Typography, TextField, Button, Card, Box } from "@mui/material";
 
 //Formulario de contacto usando Formspree
 const ContactForm = () => {
@@ -66,6 +66,7 @@ const ContactForm = () => {
   return (
     <Card
       sx={{
+        textAlign: "center",
         boxSizing: "border-box",
         display: "flex",
         flexDirection: "column",
@@ -78,12 +79,22 @@ const ContactForm = () => {
         border: "1px solid #66fcf1",
       }}
     >
-      <Typography variant="h6" sx={{ textAlign: "center", paddingBottom: 1 }}>
-        Contacta conmigo
+      <Typography variant="body1" sx={{ color: "#0b0c10", marginBottom: 2 }}>
+        Solicita más información:
       </Typography>
-      <form onSubmit={handleOnSubmit}>
+      <Box
+        component="form"
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
+        }}
+        onSubmit={handleOnSubmit}
+      >
         <TextField
-          sx={{ paddingBottom: 1 }}
+          sx={{ marginBottom: 1 }}
           label="Email"
           id="email"
           type="email"
@@ -93,7 +104,9 @@ const ContactForm = () => {
           value={inputs.email}
         />
         <TextField
-          sx={{ paddingBottom: 1 }}
+          multiline
+          rows={6}
+          sx={{ marginBottom: 2 }}
           label="Mensaje"
           variant="outlined"
           id="message"
@@ -105,8 +118,9 @@ const ContactForm = () => {
         <Button
           color="secondary"
           variant="outlined"
+          size="small"
           type="submit"
-          disabled={status.submitting}
+          disabled={status.submitting || status.submitted}
         >
           {!status.submitting
             ? !status.submitted
@@ -114,12 +128,20 @@ const ContactForm = () => {
               : "Enviado"
             : "Enviando..."}
         </Button>
-      </form>
+      </Box>
       {status.info.error && (
-        <Typography className="error">Error: {status.info.msg}</Typography>
+        <Typography
+          variant="body1"
+          sx={{ color: "#0b0c10", marginTop: 2 }}
+          className="error"
+        >
+          Error: {status.info.msg}. Por favor, revisa los datos introducidos.
+        </Typography>
       )}
       {!status.info.error && status.info.msg && (
-        <Typography>{status.info.msg}</Typography>
+        <Typography variant="body1" sx={{ color: "#0b0c10", marginTop: 2 }}>
+          {status.info.msg}
+        </Typography>
       )}
     </Card>
   );
