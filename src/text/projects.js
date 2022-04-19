@@ -2,7 +2,7 @@ const projects = [
   {
     name: "NoNo Audiología",
     description:
-      "Proyecto fullstack de audiología en el que los usuarios pueden consultar información sobre sonidos de nuestra base de datos, reproducirlos, registrarse para añadirlos y editarlos, etc.",
+      "Proyecto fullstack de audiología en el que los usuarios pueden consultar información sobre sonidos de nuestra base de datos, reproducirlos, registrarse para añadirlos, editarlos, etc.",
     categories: ["node", "express", "mongodb", "bootstrap", "ejs", "rest"],
     website: "https://nono-audiologia.herokuapp.com/",
     code: "https://github.com/diego-rg/nono-audiologia",

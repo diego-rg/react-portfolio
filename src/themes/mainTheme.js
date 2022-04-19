@@ -8,6 +8,9 @@ let mainTheme = createTheme({
     secondary: {
       main: "#0b0c10",
     },
+    success: {
+      main: "#45a29f",
+    },
   },
   components: {
     MuiTypography: {

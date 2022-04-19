@@ -5,6 +5,7 @@ import { Typography, TextField, Button, Card, Box } from "@mui/material";
 
 //Formulario de contacto usando Formspree
 const ContactForm = () => {
+  //required para captcha
   window.onload = function () {
     var el = document.getElementById("g-recaptcha-response");
     if (el) {
