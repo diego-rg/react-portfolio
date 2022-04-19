@@ -115,6 +115,11 @@ const ContactForm = () => {
           required
           value={inputs.message}
         />
+        <Box
+          sx={{ marginBottom: 2 }}
+          class="g-recaptcha"
+          data-sitekey="6Leyf4QfAAAAAICpjzRI-iXaLuttSI74IGOWPh5U"
+        ></Box>
         <Button
           color="secondary"
           variant="outlined"
