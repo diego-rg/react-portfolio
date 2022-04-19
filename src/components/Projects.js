@@ -15,11 +15,7 @@ import {
 
 const Projects = () => {
   const renderedProjects = projects
-    .filter(
-      (project) =>
-        project.name === "NoNo Audiología" ||
-        project.name === "Diccionario programación"
-    )
+    .filter((project) => project.main === true)
     .map((project) => {
       return (
         <Grid item key={project.name}>
@@ -51,7 +47,7 @@ const Projects = () => {
                 {project.name}
               </Typography>
               <Typography variant="body2" color="#0b0c10">
-                {project.description}
+                {project.fullDescription}
               </Typography>
               <Box sx={{ paddingTop: 1 }}>
                 {project.categories.map((categ) => (

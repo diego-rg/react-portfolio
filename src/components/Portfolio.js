@@ -23,7 +23,7 @@ const Portfolio = () => {
             flexDirection: "column",
             background: "white",
             maxWidth: 350,
-            height: 475,
+            height: 450,
             border: "1px solid #c5c6c8",
           }}
         >
@@ -47,22 +47,24 @@ const Portfolio = () => {
             <Typography variant="body2" color="#0b0c10">
               {project.description}
             </Typography>
+            <Box sx={{ paddingTop: 1 }}>
+              {project.categories.map((categ) => (
+                <Button
+                  key={categ}
+                  color="success"
+                  variant="outlined"
+                  size="small"
+                >
+                  {categ}
+                </Button>
+              ))}
+            </Box>
           </CardContent>
           <CardActions sx={{ marginTop: "auto", padding: 2 }}>
-            <Button
-              href={project.website}
-              color="secondary"
-              variant="outlined"
-              size="small"
-            >
+            <Button href={project.website} color="success" variant="contained">
               Visitar
             </Button>
-            <Button
-              href={project.code}
-              color="secondary"
-              variant="outlined"
-              size="small"
-            >
+            <Button href={project.code} color="success" variant="contained">
               Código
             </Button>
           </CardActions>

@@ -120,6 +120,13 @@ let mainTheme = createTheme({
         },
       },
     },
+    MuiInputBase: {
+      styleOverrides: {
+        root: {
+          fontFamily: "Source Sans Pro",
+        },
+      },
+    },
   },
 });
 

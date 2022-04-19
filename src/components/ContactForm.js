@@ -113,7 +113,7 @@ const ContactForm = () => {
         />
         <TextField
           multiline
-          rows={6}
+          rows={5}
           sx={{ marginBottom: 2 }}
           label="Mensaje"
           variant="outlined"
@@ -128,9 +128,8 @@ const ContactForm = () => {
           data-sitekey="6Leyf4QfAAAAAICpjzRI-iXaLuttSI74IGOWPh5U"
         ></div>
         <Button
-          color="secondary"
-          variant="outlined"
-          size="small"
+          color="success"
+          variant="contained"
           type="submit"
           disabled={status.submitting || status.submitted}
         >
