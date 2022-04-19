@@ -5,6 +5,13 @@ import { Typography, TextField, Button, Card, Box } from "@mui/material";
 
 //Formulario de contacto usando Formspree
 const ContactForm = () => {
+  window.onload = function () {
+    var el = document.getElementById("g-recaptcha-response");
+    if (el) {
+      el.setAttribute("required", "required");
+    }
+  };
+
   const [status, setStatus] = useState({
     submitted: false,
     submitting: false,
@@ -115,11 +122,10 @@ const ContactForm = () => {
           required
           value={inputs.message}
         />
-        <Box
-          sx={{ marginBottom: 2 }}
-          class="g-recaptcha"
+        <div
+          className="g-recaptcha"
           data-sitekey="6Leyf4QfAAAAAICpjzRI-iXaLuttSI74IGOWPh5U"
-        ></Box>
+        ></div>
         <Button
           color="secondary"
           variant="outlined"
