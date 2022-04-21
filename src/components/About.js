@@ -28,12 +28,10 @@ const About = () => {
 
       <Container maxWidth="md" sx={{ textAlign: "center" }}>
         <Typography sx={{ paddingBottom: 4 }}>
-          Desarrollador web autodidacta especializado el stack de JavaScript.
-          Actualmente trabajando en mis proyectos personales con React,
-          MaterialUI, Bootstrap, Node, Express, MongoDB, etc
+          {t("aboutDescription")}
         </Typography>
         <Button href="#Contacto" variant="outlined" sx={{ margin: "auto" }}>
-          Contacto
+          {t("aboutButton")}
         </Button>
       </Container>
     </Container>
