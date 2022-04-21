@@ -1,6 +1,8 @@
 import React from "react";
 import projects from "../text/projects";
 
+import { useTranslation } from "react-i18next";
+
 import {
   Button,
   Typography,
@@ -79,10 +81,12 @@ const Projects = () => {
       );
     });
 
+  const { t } = useTranslation();
+
   return (
     <Box
       component="section"
-      id="Proyectos"
+      id={t("headerProjects")}
       sx={{
         paddingBottom: { xs: 2, sm: 8 },
         background: "white",

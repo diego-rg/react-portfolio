@@ -2,6 +2,8 @@ import React from "react";
 
 import ContactForm from "./ContactForm";
 
+import { useTranslation } from "react-i18next";
+
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
@@ -9,10 +11,12 @@ import EmailIcon from "@mui/icons-material/Email";
 import { Typography, Box, Container, SvgIcon, IconButton } from "@mui/material";
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   return (
     <Box
       component="section"
-      id="Contacto"
+      id={t("headerContact")}
       sx={{
         minHeight: { xs: "calc(100vh - 56px)", md: "calc(100vh - 64px)" },
       }}
@@ -53,7 +57,7 @@ const Contact = () => {
               flexDirection: "row",
               justifyContent: "space-between",
               alignItems: "center",
-              marginY: {xs: 2, sm: 6}
+              marginY: { xs: 2, sm: 6 },
             }}
           >
             <IconButton href={"mailto:diego_thegarden@hotmail.com"}>

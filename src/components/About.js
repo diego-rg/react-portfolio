@@ -5,6 +5,7 @@ import { Container, Typography, Button } from "@mui/material";
 
 const About = () => {
   const { t } = useTranslation();
+  const contactId = "#" + t("headerContact");
   return (
     <Container
       component="section"
@@ -30,7 +31,7 @@ const About = () => {
         <Typography sx={{ paddingBottom: 4 }}>
           {t("aboutDescription")}
         </Typography>
-        <Button href="#Contacto" variant="outlined" sx={{ margin: "auto" }}>
+        <Button href={contactId} variant="outlined" sx={{ margin: "auto" }}>
           {t("aboutButton")}
         </Button>
       </Container>

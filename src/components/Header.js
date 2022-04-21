@@ -21,9 +21,9 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 
 const sections = [
-  i18next.t("headerContact"),
   i18next.t("headerProjects"),
   i18next.t("headerPortfolio"),
+  i18next.t("headerContact"),
 ];
 
 const Header = () => {
@@ -42,6 +42,7 @@ const Header = () => {
   });
 
   const { t } = useTranslation();
+
   return (
     <AppBar
       position="sticky"
