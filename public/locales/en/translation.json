@@ -1,4 +1,7 @@
 {
+  "headerContact": "Contact",
+  "headerProjects": "Projects",
+  "headerPortfolio": "Portfolio",
   "aboutH2": "Web Developer",
   "aboutDescription": "Self-taught JavaScript web developer. Currently working on my personal projects with React, MaterialUI, Bootstrap, Node, Express, MongoDB, etc",
   "aboutButton": "Contact"

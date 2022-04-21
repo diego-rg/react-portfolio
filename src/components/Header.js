@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 
+import { useTranslation } from "react-i18next";
+import i18next from "i18next";
+
 import LangButtons from "./LangButtons";
 
 import {
@@ -17,7 +20,11 @@ import {
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 
-const sections = ["Proyectos", "Portfolio", "Contacto"];
+const sections = [
+  i18next.t("headerContact"),
+  i18next.t("headerProjects"),
+  i18next.t("headerPortfolio"),
+];
 
 const Header = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -34,6 +41,7 @@ const Header = () => {
     threshold: 0,
   });
 
+  const { t } = useTranslation();
   return (
     <AppBar
       position="sticky"
@@ -97,9 +105,9 @@ const Header = () => {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {sections.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Link href={`#${page}`}>{page}</Link>
+              {sections.map((section) => (
+                <MenuItem key={t(section)} onClick={handleCloseNavMenu}>
+                  <Link href={`#${t(section)}`}>{t(section)}</Link>
                 </MenuItem>
               ))}
             </Menu>
@@ -127,16 +135,16 @@ const Header = () => {
               justifyContent: "flex-end",
             }}
           >
-            {sections.map((page) => (
+            {sections.map((section) => (
               <Link
-                key={page}
+                key={t(section)}
                 sx={{
                   color: trigger ? "#202833" : "#c5c6c8",
                   paddingLeft: 2,
                 }}
-                href={`#${page}`}
+                href={`#${t(section)}`}
               >
-                {page}
+                {t(section)}
               </Link>
             ))}
           </Box>
