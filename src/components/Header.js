@@ -65,9 +65,8 @@ const Header = () => {
             >
               diego-rg
             </Link>
+            <LangButtons />
           </Typography>
-
-          <LangButtons />
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -116,6 +115,7 @@ const Header = () => {
               justifyContent: "flex-end",
             }}
           >
+            <LangButtons />
             <Link sx={{ padding: 1.5 }} href="#">
               diego-rg
             </Link>

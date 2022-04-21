@@ -6,18 +6,25 @@ import { Container, Button } from "@mui/material";
 
 const LangButtons = () => {
   return (
-    <Container sx={{ display: "flex", justifyContent: "center" }}>
+    <Container
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       <Button
         size="small"
         sx={{
-          color: "transparent",
+          marginX: 1,
           padding: 0,
+          color: "transparent",
           backgroundImage: "url(/static/img/spain.png)",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
-          backgroundSize: "cover",
-          minWidth: "35px",
-          maxHeight: "20px",
+          backgroundSize: "contain",
+          minWidth: "40px",
+          maxHeight: "28px",
         }}
         onClick={() => i18next.changeLanguage("es")}
       >
@@ -26,14 +33,15 @@ const LangButtons = () => {
       <Button
         size="small"
         sx={{
-          color: "transparent",
+          marginX: 1,
           padding: 0,
-          backgroundImage: "url(/static/img/britain.png)",
+          color: "transparent",
+          backgroundImage: "url(/static/img/uk.png)",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
-          backgroundSize: "cover",
-          minWidth: "35px",
-          maxHeight: "20px",
+          backgroundSize: "contain",
+          minWidth: "40px",
+          maxHeight: "28px",
         }}
         onClick={() => i18next.changeLanguage("en")}
       >
