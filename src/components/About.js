@@ -1,8 +1,10 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import { Container, Typography, Button } from "@mui/material";
 
 const About = () => {
+  const { t } = useTranslation();
   return (
     <Container
       component="section"
@@ -20,7 +22,7 @@ const About = () => {
           diego rg
         </Typography>
         <Typography component="h4" variant="h4" sx={{ textAlign: "center" }}>
-          Desarrollador web
+          {t("aboutH2")}
         </Typography>
       </Container>
 
