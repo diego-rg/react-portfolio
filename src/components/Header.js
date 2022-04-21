@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import LangButtons from "./LangButtons";
+
 import {
   AppBar,
   Toolbar,
@@ -64,6 +66,8 @@ const Header = () => {
               diego-rg
             </Link>
           </Typography>
+
+          <LangButtons />
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
