@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+import { useTranslation } from "react-i18next";
+
 import { Typography, TextField, Button, Card, Box } from "@mui/material";
 
 //Formulario de contacto usando Formspree
 const ContactForm = () => {
+  const { t } = useTranslation();
+
   //required para captcha
   window.onload = function () {
     var el = document.getElementById("g-recaptcha-response");
@@ -64,7 +68,7 @@ const ContactForm = () => {
       data: inputs,
     })
       .then((response) => {
-        handleServerResponse(true, "Mensaje enviado. Saludos!");
+        handleServerResponse(true, t("formSuccess"));
       })
       .catch((error) => {
         handleServerResponse(false, error.response.data.error);
@@ -88,7 +92,7 @@ const ContactForm = () => {
       }}
     >
       <Typography variant="body1" sx={{ color: "#0b0c10", marginBottom: 2 }}>
-        Solicita más información:
+        {t("formHeader")}
       </Typography>
       <Box
         component="form"
@@ -115,7 +119,7 @@ const ContactForm = () => {
           multiline
           rows={5}
           sx={{ marginBottom: 2 }}
-          label="Mensaje"
+          label={t("formLabelMsg")}
           variant="outlined"
           id="message"
           name="message"
@@ -135,9 +139,9 @@ const ContactForm = () => {
         >
           {!status.submitting
             ? !status.submitted
-              ? "Enviar"
-              : "Enviado"
-            : "Enviando..."}
+              ? t("formButtonSubmit")
+              : t("formButtonSubmitted")
+            : t("formButtonSubmitting")}
         </Button>
       </Box>
       {status.info.error && (
@@ -146,7 +150,7 @@ const ContactForm = () => {
           sx={{ color: "#0b0c10", marginTop: 2 }}
           className="error"
         >
-          Error: {status.info.msg}. Por favor, revisa los datos introducidos.
+          Error: {status.info.msg}.
         </Typography>
       )}
       {!status.info.error && status.info.msg && (
