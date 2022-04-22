@@ -22,5 +22,6 @@
   "rgbName": "Juego colores RGB",
   "rgbDescription": "Juego en el que el usuario debe adivinar el color que corresponde con la notación RGB generada.",
   "basicName": "Portfolio css/html",
-  "basicDescription": "Primer portfolio hecho con CSS3 y HTML5."
+  "basicDescription": "Primer portfolio hecho con CSS3 y HTML5.",
+  "sectionContact": "Contacto"
 }

@@ -22,5 +22,6 @@
   "rgbName": "RGB game",
   "rgbDescription": "Game where the user has to guess the color that matches a randomly generated RGB notation.",
   "basicName": "Portfolio css/html",
-  "basicDescription": "First porfolio made only with HTML5 and CSS3."
+  "basicDescription": "First porfolio made only with HTML5 and CSS3.",
+  "sectionContact": "Contact"
 }

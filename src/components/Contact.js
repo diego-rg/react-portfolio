@@ -39,7 +39,7 @@ const Contact = () => {
             color: "#66fcf1",
           }}
         >
-          Contacto
+          {t("sectionContact")}
         </Typography>
         <ContactForm />
         <Box
