@@ -16,11 +16,13 @@ import {
 } from "@mui/material";
 
 const Projects = () => {
+  const { t } = useTranslation();
+
   const renderedProjects = projects
     .filter((project) => project.main === true)
     .map((project) => {
       return (
-        <Grid item key={project.name}>
+        <Grid item key={t(project.name)}>
           <Card
             sx={{
               display: "flex",
@@ -35,7 +37,7 @@ const Projects = () => {
               <CardMedia
                 component="img"
                 height="auto"
-                alt={project.name}
+                alt={t(project.name)}
                 image={project.image}
               />
             </Box>
@@ -46,10 +48,10 @@ const Projects = () => {
                 component="div"
                 sx={{ padding: 0 }}
               >
-                {project.name}
+                {t(project.name)}
               </Typography>
               <Typography variant="body2" color="#0b0c10">
-                {project.fullDescription}
+                {t(project.fullDescription)}
               </Typography>
               <Box sx={{ paddingTop: 1 }}>
                 {project.categories.map((categ) => (
@@ -70,18 +72,16 @@ const Projects = () => {
                 color="success"
                 variant="contained"
               >
-                Visitar
+                {t("visitButton")}
               </Button>
               <Button href={project.code} color="success" variant="contained">
-                Código
+              {t("codeButton")}
               </Button>
             </CardActions>
           </Card>
         </Grid>
       );
     });
-
-  const { t } = useTranslation();
 
   return (
     <Box
@@ -111,7 +111,7 @@ const Projects = () => {
             color: "#0b0c10",
           }}
         >
-          Proyectos principales
+          {t("sectionProjects")}
         </Typography>
         <Grid
           container

@@ -4,5 +4,14 @@
   "headerPortfolio": "Portfolio",
   "aboutH2": "Web Developer",
   "aboutDescription": "Self-taught JavaScript web developer. Currently working on my personal projects with React, MaterialUI, Bootstrap, Node, Express, MongoDB, etc",
-  "aboutButton": "Contact"
+  "aboutButton": "Contact",
+  "visitButton": "Visit",
+  "codeButton": "Code",
+  "sectionProjects": "Main Projects",
+  "nonoName": "NoNo audiology",
+  "nonoFullDescription": "Fullstack audiology project. Users can check data about sounds in our database, play the audio files and register to create, update or delete sounds.",
+  "nonoDescription": "Fullstack audiology project.",
+  "dictionaryName": "Programming Dictionary",
+  "dictionaryFullDescription": "Frontend for our API about terms related to programming. Users can check the term definitions, create their own cheatsheets and download them in doc format.",
+  "disctionaryDescription": "Frontend for our dictionary API."
 }

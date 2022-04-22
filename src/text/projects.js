@@ -1,10 +1,10 @@
+import i18next from "i18next";
+
 const projects = [
   {
-    name: "NoNo Audiología",
-    fullDescription:
-      "Proyecto fullstack de audiología en el que los usuarios pueden consultar información sobre sonidos de nuestra base de datos, reproducirlos y registrarse para añadirlos, editarlos o eliminarlos.",
-    description:
-      "Proyecto fullstack de audiología.",
+    name: i18next.t("nonoName"),
+    fullDescription: i18next.t("nonoFullDescription"),
+    description: i18next.t("nonoDescription"),
     categories: ["node", "express", "mongodb", "bootstrap", "ejs", "rest"],
     website: "https://nono-audiologia.herokuapp.com/",
     code: "https://github.com/diego-rg/nono-audiologia",
@@ -12,11 +12,9 @@ const projects = [
     main: true,
   },
   {
-    name: "Diccionario programación",
-    fullDescription:
-      "Consumo de nuestra API sobre términos relacionados con programación. Los usuarios pueden consultar el diccionario, crear sus apuntes y descargarlos en formato doc.",
-    description:
-      "Consumo de nuestra API sobre términos relacionados con programación.",
+    name: i18next.t("dictionaryName"),
+    fullDescription: i18next.t("dictionaryFullDescription"),
+    description: i18next.t("dictionaryDescription"),
     categories: ["react", "materialui"],
     website: "https://react-diccionario-programacion.vercel.app/",
     code: "https://github.com/diego-rg/react-diccionario-programacion",

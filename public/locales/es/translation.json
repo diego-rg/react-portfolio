@@ -1,8 +1,17 @@
 {
   "headerContact": "Contacto",
-  "headerProjects": "Projectos",
+  "headerProjects": "Proyectos",
   "headerPortfolio": "Portfolio",
   "aboutH2": "Desarrollador Web",
   "aboutDescription": "Desarrollador web autodidacta especializado el stack de JavaScript. Actualmente trabajando en mis proyectos personales con React, MaterialUI, Bootstrap, Node, Express, MongoDB, etc",
-  "aboutButton": "Contacto"
+  "aboutButton": "Contacto",
+  "visitButton": "Visitar",
+  "codeButton": "Código",
+  "sectionProjects": "Proyectos Principales",
+  "nonoName": "NoNo audiología",
+  "nonoFullDescription": "Proyecto fullstack de audiología en el que los usuarios pueden consultar información sobre sonidos de nuestra base de datos, reproducirlos y registrarse para añadirlos, editarlos o eliminarlos.",
+  "nonoDescription": "Proyecto fullstack de audiología.",
+  "dictionaryName": "Diccionario programación",
+  "dictionaryFullDescription": "Consumo de nuestra API sobre términos relacionados con programación. Los usuarios pueden consultar el diccionario, crear sus apuntes y descargarlos en formato doc.",
+  "dictionaryDescription": "Consumo de nuestra API sobre términos relacionados con programación."
 }

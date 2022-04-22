@@ -16,6 +16,8 @@ import {
 } from "@mui/material";
 
 const Portfolio = () => {
+  const { t } = useTranslation();
+
   const renderedProjects = projects.map((project) => {
     return (
       <Grid item key={project.name}>
@@ -47,7 +49,7 @@ const Portfolio = () => {
               {project.name}
             </Typography>
             <Typography variant="body2" color="#0b0c10">
-              {project.description}
+              {t(project.description)}
             </Typography>
             <Box sx={{ paddingTop: 1 }}>
               {project.categories.map((categ) => (
@@ -74,8 +76,6 @@ const Portfolio = () => {
       </Grid>
     );
   });
-
-  const { t } = useTranslation();
 
   return (
     <Box
