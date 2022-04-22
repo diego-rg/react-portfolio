@@ -16,7 +16,7 @@ const LangButtons = () => {
       <Button
         size="small"
         sx={{
-          marginX: 1,
+          marginX: 0.5,
           padding: 0,
           color: "transparent",
           backgroundImage: "url(/static/img/spain.png)",
@@ -33,7 +33,7 @@ const LangButtons = () => {
       <Button
         size="small"
         sx={{
-          marginX: 1,
+          marginX: 0.5,
           padding: 0,
           color: "transparent",
           backgroundImage: "url(/static/img/uk.png)",
