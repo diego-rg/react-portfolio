@@ -22,9 +22,8 @@ const projects = [
     main: true,
   },
   {
-    name: "API diccionario programación",
-    description:
-      "API REST con términos relacionados con programación y sus definiciones.",
+    name: i18next.t("apiName"),
+    description: i18next.t("apiDescription"),
     categories: ["node", "express", "rest", "mongodb"],
     website: "https://api-diccionarioprogramacion.herokuapp.com/",
     code: "https://github.com/diego-rg/api-diccionario-programacion",
@@ -32,9 +31,8 @@ const projects = [
     main: false,
   },
   {
-    name: "MetTech",
-    description:
-      "Página web para una empresa ficticia de fabricación de elementos metálicos.",
+    name: i18next.t("metalName"),
+    description: i18next.t("metalDescription"),
     categories: ["bootstrap"],
     website: "https://diego-rg.github.io/mettech-bootstrap/",
     code: "https://github.com/diego-rg/mettech-bootstrap",
@@ -42,9 +40,8 @@ const projects = [
     main: false,
   },
   {
-    name: "Juego colores RGB",
-    description:
-      "Juego en el que el usuario debe adivinar el color que corresponde con la notación RGB generada.",
+    name: i18next.t("rgbName"),
+    description: i18next.t("rgbDescription"),
     categories: ["javascript", "css", "html"],
     website: "https://diego-rg.github.io/color-guessing-game/",
     code: "https://github.com/diego-rg/color-guessing-game",
@@ -52,8 +49,8 @@ const projects = [
     main: false,
   },
   {
-    name: "Portfolio css/html",
-    description: "Primer portfolio hecho con CSS3 y HTML5.",
+    name: i18next.t("basicName"),
+    description: i18next.t("basicDescription"),
     categories: ["css", "html"],
     website: "https://diego-rg.github.io/portfolio-basico-espanol/",
     code: "https://github.com/diego-rg/portfolio-basico-espanol",

@@ -13,5 +13,14 @@
   "nonoDescription": "Proyecto fullstack de audiología.",
   "dictionaryName": "Diccionario programación",
   "dictionaryFullDescription": "Consumo de nuestra API sobre términos relacionados con programación. Los usuarios pueden consultar el diccionario, crear sus apuntes y descargarlos en formato doc.",
-  "dictionaryDescription": "Consumo de nuestra API sobre términos relacionados con programación."
+  "dictionaryDescription": "Consumo de nuestra API sobre términos relacionados con programación.",
+  "sectionPortfolio": "Portfolio Completo",
+  "apiName": "API diccionario programación",
+  "apiDescription": "API REST con términos relacionados con programación y sus definiciones.",
+  "metalName": "MetTech",
+  "metalDescription": "Página web para una empresa ficticia de fabricación de elementos metálicos.",
+  "rgbName": "Juego colores RGB",
+  "rgbDescription": "Juego en el que el usuario debe adivinar el color que corresponde con la notación RGB generada.",
+  "basicName": "Portfolio css/html",
+  "basicDescription": "Primer portfolio hecho con CSS3 y HTML5."
 }

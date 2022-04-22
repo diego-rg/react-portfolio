@@ -13,5 +13,14 @@
   "nonoDescription": "Fullstack audiology project.",
   "dictionaryName": "Programming Dictionary",
   "dictionaryFullDescription": "Frontend for our API about terms related to programming. Users can check the term definitions, create their own cheatsheets and download them in doc format.",
-  "disctionaryDescription": "Frontend for our dictionary API."
+  "dictionaryDescription": "Frontend for our programming dictionary API.",
+  "sectionPortfolio": "Full Portfolio",
+  "apiName": "Programming dictionary API",
+  "apiDescription": "REST API about terms related to porgramming and their definitions.",
+  "metalName": "MetTech",
+  "metalDescription": "Website for a fake metal fabrication company.",
+  "rgbName": "RGB game",
+  "rgbDescription": "Game where the user has to guess the color that matches a randomly generated RGB notation.",
+  "basicName": "Portfolio css/html",
+  "basicDescription": "First porfolio made only with HTML5 and CSS3."
 }

@@ -20,7 +20,7 @@ const Portfolio = () => {
 
   const renderedProjects = projects.map((project) => {
     return (
-      <Grid item key={project.name}>
+      <Grid item key={t(project.name)}>
         <Card
           sx={{
             display: "flex",
@@ -35,7 +35,7 @@ const Portfolio = () => {
             <CardMedia
               component="img"
               height="auto"
-              alt={project.name}
+              alt={t(project.name)}
               image={project.image}
             />
           </Box>
@@ -46,7 +46,7 @@ const Portfolio = () => {
               component="div"
               sx={{ padding: 0 }}
             >
-              {project.name}
+              {t(project.name)}
             </Typography>
             <Typography variant="body2" color="#0b0c10">
               {t(project.description)}
@@ -66,10 +66,10 @@ const Portfolio = () => {
           </CardContent>
           <CardActions sx={{ marginTop: "auto", padding: 2 }}>
             <Button href={project.website} color="success" variant="contained">
-              Visitar
+              {t("visitButton")}
             </Button>
             <Button href={project.code} color="success" variant="contained">
-              Código
+              {t("codeButton")}
             </Button>
           </CardActions>
         </Card>
@@ -105,7 +105,7 @@ const Portfolio = () => {
             color: "#0b0c10",
           }}
         >
-          Portfolio completo
+          {t("sectionPortfolio")}
         </Typography>
         <Grid
           container
