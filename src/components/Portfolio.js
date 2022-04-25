@@ -23,12 +23,13 @@ const Portfolio = () => {
       <Grid item key={t(project.name)}>
         <Card
           sx={{
+            boxShadow: 3,
             display: "flex",
             flexDirection: "column",
             background: "white",
             maxWidth: 350,
             height: 450,
-            border: "1px solid #c5c6c8",
+            border: "2px solid #c5c6c8",
           }}
         >
           <Box sx={{ padding: 2 }}>

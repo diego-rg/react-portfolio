@@ -25,12 +25,13 @@ const Projects = () => {
         <Grid item key={t(project.name)}>
           <Card
             sx={{
+              boxShadow: 3,
               display: "flex",
               flexDirection: "column",
               background: "white",
               maxWidth: 550,
               height: 550,
-              border: "1px solid #c5c6c8",
+              border: "2px solid #c5c6c8",
             }}
           >
             <Box sx={{ padding: 2 }}>
@@ -75,7 +76,7 @@ const Projects = () => {
                 {t("visitButton")}
               </Button>
               <Button href={project.code} color="success" variant="contained">
-              {t("codeButton")}
+                {t("codeButton")}
               </Button>
             </CardActions>
           </Card>
