@@ -2,6 +2,15 @@ import i18next from "i18next";
 
 const projects = [
   {
+    name: i18next.t("freeName"),
+    description: i18next.t("freeDescription"),
+    categories: ["tailwind", "react"],
+    website: "https://freelance-website-psi.vercel.app/",
+    code: "https://github.com/diego-rg/freelance-website",
+    image: "/static/img/./freelance.PNG",
+    main: false,
+  },
+  {
     name: i18next.t("nonoName"),
     fullDescription: i18next.t("nonoFullDescription"),
     description: i18next.t("nonoDescription"),
@@ -46,15 +55,6 @@ const projects = [
     website: "https://diego-rg.github.io/color-guessing-game/",
     code: "https://github.com/diego-rg/color-guessing-game",
     image: "/static/img/game.PNG",
-    main: false,
-  },
-  {
-    name: i18next.t("basicName"),
-    description: i18next.t("basicDescription"),
-    categories: ["css", "html"],
-    website: "https://diego-rg.github.io/portfolio-basico-espanol/",
-    code: "https://github.com/diego-rg/portfolio-basico-espanol",
-    image: "/static/img/./portfolioSencillo.PNG",
     main: false,
   },
 ];
