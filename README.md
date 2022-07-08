@@ -1,1 +1,1 @@
-Portfolio personal hecho con React/Hooks y MaterialUI
+Portfolio personal hecho con React/Hooks y MaterialUI.
